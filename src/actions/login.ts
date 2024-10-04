@@ -1,7 +1,7 @@
 'use server';
 
-import { signIn } from '@/auth';
+import * as auth from '@/auth';
 
-export const Login = () => {
-  return signIn;
-};
+export async function Login() {
+  return auth.signIn;
+}

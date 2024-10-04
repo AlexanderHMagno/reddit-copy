@@ -1,6 +1,6 @@
 'use server';
 
-export const createComment = () => {
+export async function createComment() {
   //Revalidate time base Post
-  return 'createComment';
-};
+  // return 'createComment';
+}

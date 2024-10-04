@@ -1,6 +1,6 @@
 'use server';
 
-export const createTopic = () => {
+export async function createTopic() {
   //Revalidate home time based? or on Demand
-  return 'createTopic';
-};
+  // return 'createTopic';
+}

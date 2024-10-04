@@ -1,7 +1,6 @@
 'use server';
 
-export const createPost = () => {
+export async function createPost() {
   //Revalidate Topic view
-
-  return 'createPost';
-};
+  // return 'createPost';
+}
