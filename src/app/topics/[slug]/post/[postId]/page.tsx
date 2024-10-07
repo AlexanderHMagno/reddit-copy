@@ -8,8 +8,6 @@ type Props = {
   // searchParams: {};
 };
 
-const ViewPost = ({ params }: Props) => {
+export default function ViewPost({ params }: Props) {
   return <div>{JSON.stringify(params)}</div>;
-};
-
-export default ViewPost;
+}

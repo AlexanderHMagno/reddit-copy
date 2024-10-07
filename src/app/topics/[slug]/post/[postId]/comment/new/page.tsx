@@ -1,3 +1,3 @@
-export const CreateComment = () => {
+export default function CreateComment() {
   return <div>CreateComment</div>;
-};
+}
