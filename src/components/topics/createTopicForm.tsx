@@ -17,17 +17,17 @@ export function CreateTopicForm() {
 
   return (
     <div>
-      <Popover placement="left" className="w-72">
+      <Popover placement="left">
         <PopoverTrigger>
           <Button color="primary"> Create a New Topic</Button>
         </PopoverTrigger>
         <PopoverContent>
-          <div className="p-1 w-full h-72">
-            <form
-              action={action}
-              className="flex flex-col justify-evenly h-full"
-            >
+          <form action={action}>
+            <div className="flex flex-col gap-4 w-80 p-4 ">
+              <h2 className=" font-bold  text-lg">Create Topic</h2>
               <Input
+                label="Topic"
+                labelPlacement="outside"
                 name="topic"
                 type="text"
                 placeholder="Label Name"
@@ -35,6 +35,8 @@ export function CreateTopicForm() {
                 errorMessage={formData.errors.topic?.join(', ')}
               ></Input>
               <Textarea
+                label="Description"
+                labelPlacement="outside"
                 name="description"
                 placeholder="Please add a description for this new topic"
                 size="lg"
@@ -47,8 +49,8 @@ export function CreateTopicForm() {
                   {formData.errors._form.join(', ')}
                 </div>
               )}
-            </form>
-          </div>
+            </div>
+          </form>
         </PopoverContent>
       </Popover>
     </div>
