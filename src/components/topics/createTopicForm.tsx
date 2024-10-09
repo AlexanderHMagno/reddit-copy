@@ -10,6 +10,7 @@ import {
 
 import * as actions from '@/actions';
 import { useFormState } from 'react-dom';
+import ButtonSubmit from '../common/button-submit';
 
 export function CreateTopicForm() {
   const [formData, action] = useFormState(actions.createTopic, { errors: {} });
@@ -40,7 +41,7 @@ export function CreateTopicForm() {
                 isInvalid={!!formData.errors.description}
                 errorMessage={formData.errors.description?.join(', ')}
               />
-              <Button type="submit">Create</Button>
+              <ButtonSubmit>Create</ButtonSubmit>
               {formData.errors._form && (
                 <div className="bg-red-500 text-white rounded-md p-4">
                   {formData.errors._form.join(', ')}
