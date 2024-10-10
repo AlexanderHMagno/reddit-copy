@@ -10,6 +10,7 @@ const schemaTopic = z.object({
   topic: z
     .string()
     .trim()
+    .toLowerCase()
     .min(3, { message: 'Topic must be longer' })
     .regex(/^[a-zA-Z-]+$/, {
       message: 'Please only provide Characters and dashes',

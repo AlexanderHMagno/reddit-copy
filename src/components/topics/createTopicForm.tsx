@@ -18,8 +18,10 @@ export function CreateTopicForm() {
   return (
     <div>
       <Popover placement="left">
-        <PopoverTrigger>
-          <Button color="primary"> Create a New Topic</Button>
+        <PopoverTrigger className="flex">
+          <Button color="primary" className="m-auto">
+            Create a New Topic
+          </Button>
         </PopoverTrigger>
         <PopoverContent>
           <form action={action}>

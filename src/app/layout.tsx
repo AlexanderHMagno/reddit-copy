@@ -33,8 +33,10 @@ export default function RootLayout({
       >
         <SessionProvider>
           <Provider>
-            <Header />
-            {children}
+            <div className="max-w-6xl m-auto">
+              <Header />
+              {children}
+            </div>
           </Provider>
         </SessionProvider>
       </body>
