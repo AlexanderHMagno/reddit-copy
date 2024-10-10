@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { Divider } from '@nextui-org/react';
+import CreatePostForm from '@/components/posts/create-post-form';
 type Props = {
   params: {
     slug: string;
@@ -7,8 +8,19 @@ type Props = {
   // searchParams: {};
 };
 
-const page = (props: Props) => {
-  return <div>{props.params.slug}</div>;
+const page = ({ params }: Props) => {
+  return (
+    <div className="flex  justify-start">
+      <div className="w-3/4">
+        <h1 className="font-bold">{params.slug}</h1>
+      </div>
+      <div className="w-1/4 border-warning-100 shadow-md h-dvh">
+        <CreatePostForm slug={params.slug} />
+        <Divider className="my-4" />
+        <div></div>
+      </div>
+    </div>
+  );
 };
 
 export default page;
